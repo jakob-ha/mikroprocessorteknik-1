@@ -44,7 +44,7 @@ int main(void) {
     // this section of code will repeat in an infinite loop
     // Set PORTD bit 7, causing pin D7 to have a value of HIGH
     // use a compound operator for better readability
-    PORTD |= 0x80;
+    PORTD |= 0b10000000;
     //wait for 1000 ms
     _delay_ms(1000);
 
