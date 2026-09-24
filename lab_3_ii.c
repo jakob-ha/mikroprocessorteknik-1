@@ -33,6 +33,5 @@ void loop() {
   //lcd_goto(0x40);
   lcd.print(buffer);
   //lcd_puts(buffer);
-  delay(50);
+  delay(200);
 }
-
