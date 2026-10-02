@@ -1,12 +1,11 @@
 #include <LiquidCrystal.h>
 #include <stdio.h>
-#include <util/atomic.h> // Required for ATOMIC_BLOCK to protect data
 
 LiquidCrystal lcd(3, 2, 4, 5, 6, 7);
 
 char buffer[12];
 
-const unsigned char n = 10; // TO CALIBRATE
+const unsigned char n = 40;
 volatile unsigned int adcValues[n] = {};
 
 const int minADC = 60;
@@ -29,7 +28,7 @@ void setup() {
   ADCSRA |= (1 << ADSC);
   
   lcd.setCursor(0, 0);
-  lcd.print("Temperature:");
+  lcd.print("Percentage:");
 }
 
 void loop() {
