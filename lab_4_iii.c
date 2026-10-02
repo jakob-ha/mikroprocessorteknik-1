@@ -5,11 +5,11 @@ LiquidCrystal lcd(3, 2, 4, 5, 6, 7);
 
 char buffer[12];
 
-const unsigned char n = 40; // TO CALIBRATE
+const unsigned char n = 40;
 volatile unsigned int adcValues[n] = {};
 
-const int minADC = 50; // TO CALIBRATE
-const int maxADC = 1023; // TO CALIBRATE
+const int minADC = 50;
+const int maxADC = 1020;
 
 void setup() {
   Serial.begin(9600);
